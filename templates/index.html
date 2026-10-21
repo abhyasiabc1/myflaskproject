@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %}Home - DAVD Consulting{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-container">
+    <h1>Struggling to scale your business operations?</h1>
+    <p>
+      We provide tailored, actionable strategies to optimize workflows, increase
+      profitability, and set up sustainable growth paths for modern enterprises.
+    </p>
+    <div class="hero-buttons">
+      <a
+        href="{{ url_for('contact') }}"
+        class="btn btn-primary"
+        >Book a Consultation</a
+      >
+      <a
+        href="{{ url_for('services') }}"
+        class="btn btn-secondary"
+        >Explore Services</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">Why Partner With Us?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Expert Guidance</h3>
+        <p>
+          Over 15 years of hands-on industry experience leading digital
+          transformation and operational overhauls.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Data-Driven Outcomes</h3>
+        <p>
+          We analyze your core metrics to build solutions that explicitly cut
+          costs and boost margins.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Custom Blueprints</h3>
+        <p>
+          No cookie-cutter templates. Every business gets a bespoke workflow
+          manual custom-built for their team size.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block title %}Contact Us - DAVD Consulting{%
+endblock %} {% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>Let's Work Together</h1>
+    <p>
+      Ready to unlock your business potential? Drop us a line below to arrange
+      an initial exploratory discovery session.
+    </p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container contact-container">
+    <!-- Renders only after a successful POST request handler loop -->
+    {% if success %}
+    <div class="alert alert-success">
+      Thank you! Your message has been received. We will get back to you within
+      24 hours.
+    </div>
+    {% endif %}
+
+    <form
+      action="{{ url_for('contact') }}"
+      method="POST"
+      class="contact-form"
+    >
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="John Doe"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="john@example.com"
+        />
+      </div>
+      <div class="form-group">
+        <label for="message">How can we help your business?</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          placeholder="Tell us briefly about your current operations and goals..."
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+{% endblock %}

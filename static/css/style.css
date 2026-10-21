@@ -1,0 +1,49 @@
+:root {
+    --primary: #1e3a8a;
+    --primary-hover: #1e40af;
+    --secondary: #475569;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; color: var(--dark); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Header Navbar */
+.navbar { border-bottom: 1px solid var(--border); padding: 20px 0; }
+.navbar-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 700; color: var(--dark); text-decoration: none; }
+.logo span { color: var(--primary); }
+.nav-links a { color: var(--secondary); text-decoration: none; margin-left: 20px; font-weight: 500; }
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero Core */
+.hero { background-color: var(--light); padding: 100px 0; text-align: center; }
+.hero-container h1 { font-size: 44px; margin-bottom: 20px; }
+.hero-container p { font-size: 18px; color: var(--secondary); max-width: 700px; margin: 0 auto 30px; }
+
+/* Component Blocks */
+.btn { display: inline-block; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+.btn-primary { background-color: var(--primary); color: var(--white); }
+.btn-primary:hover { background-color: var(--primary-hover); }
+.btn-secondary { border: 1px solid var(--secondary); color: var(--secondary); margin-left: 10px; }
+
+.features { padding: 80px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { padding: 30px; border: 1px solid var(--border); border-radius: 8px; }
+.card h3 { color: var(--primary); margin-bottom: 10px; }
+
+.page-header { background-color: var(--light); padding: 60px 0; text-align: center; }
+.services-list { padding: 60px 0; }
+.service-item { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+
+.contact-section { padding: 60px 0; }
+.contact-container { max-width: 600px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; }
+.alert { padding: 15px; background-color: #d1fae5; color: #065f46; border-radius: 6px; margin-bottom: 25px; }
+.footer { background-color: var(--dark); color: #94a3b8; text-align: center; padding: 40px 0; }
