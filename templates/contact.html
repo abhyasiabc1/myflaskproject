@@ -15,8 +15,8 @@ endblock %} {% block content %}
     <!-- Renders only after a successful POST request handler loop -->
     {% if success %}
     <div class="alert alert-success">
-      Thank you! Your message has been received. We will get back to you within
-      24 hours.
+      Thank you {{ name }}! Your message has been received. We will get back to
+      you within 24 hours.
     </div>
     {% endif %}
 

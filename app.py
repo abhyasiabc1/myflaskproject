@@ -13,6 +13,7 @@ def services():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     success = False
+    name = ""
     if request.method == 'POST':
         # Safely capture form variables sent by clients
         name = request.form.get('name')
@@ -23,7 +24,7 @@ def contact():
         print(f"Lead Received: {name} | {email} | Message: {message}")
         success = True
         
-    return render_template('contact.html', success=success)
+    return render_template('contact.html', success=success, name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)
